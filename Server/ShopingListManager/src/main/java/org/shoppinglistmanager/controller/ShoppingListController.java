@@ -25,10 +25,10 @@ public class ShoppingListController {
         return shoppingListService.addNewItemToList(id, itemRest);
     }
 
-    @PutMapping("/{id}/updateItem/")
-    public ResponseEntity<Integer> updateNewItemToList(@PathVariable Integer id,
+    @PutMapping("/{listId}/updateItem/")
+    public ResponseEntity<Integer> updateNewItemToList(@PathVariable Integer listId,
                                                     @RequestBody ItemRest itemRest) {
-        return shoppingListService.updateNewItemToList(id, itemRest);
+        return shoppingListService.updateItem(listId, itemRest);
     }
 
     @GetMapping("/{id}/")

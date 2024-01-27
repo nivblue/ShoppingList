@@ -1,6 +1,8 @@
 package org.shoppinglistmanager.convertor;
 
+import org.listobjects.ItemRest;
 import org.listobjects.ShoppingListRest;
+import org.shoppinglistmanager.entity.Item;
 import org.shoppinglistmanager.entity.ShoppingList;
 
 /**
@@ -11,6 +13,15 @@ public class EntityConvertor {
         return ShoppingList.builder()
                 .title(shoppingListRest.title())
                 .description(shoppingListRest.description())
+                .build();
+    }
+
+    public static Item convertToSql(ItemRest itemRest) {
+        return Item.builder()
+                .id(itemRest.id())
+                .count(itemRest.count())
+                .title(itemRest.title())
+                .description(itemRest.description())
                 .build();
     }
 }
