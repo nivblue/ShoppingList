@@ -1,8 +1,10 @@
-rootProject.name = 'ShopingList'
+rootProject.name = 'ShoppingList'
 include 'Client'
 include 'Server'
 include 'Server:ListSharedObjects'
 findProject(':Server:ListSharedObjects')?.name = 'ListSharedObjects'
 include 'Server:Controller'
 findProject(':Server:Controller')?.name = 'Controller'
+include 'Server:ShoppingListManager'
+findProject(':Server:ShoppingListManager')?.name = 'ShoppingListManager'
 
