@@ -33,7 +33,7 @@ public class ShoppingListService {
 
     public ResponseEntity<ShoppingListRest> getShoppingListById(int id) {
         return shoppingListRepository.findById(id)
-                .map(RestConvertor::convertShoppingListToRest)
+                .map(RestConvertor::convertToRest)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.badRequest().build());
     }

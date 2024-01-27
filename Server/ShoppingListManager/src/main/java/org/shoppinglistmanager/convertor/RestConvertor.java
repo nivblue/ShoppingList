@@ -10,7 +10,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class RestConvertor {
-    public static ShoppingListRest convertShoppingListToRest(ShoppingList shoppingList) {
+
+    public static ShoppingListRest convertToRest(ShoppingList shoppingList) {
         return ShoppingListRest.builder()
                 .id(shoppingList.getId())
                 .title(shoppingList.getTitle())
@@ -19,7 +20,7 @@ public class RestConvertor {
                 .build();
     }
 
-    public static ItemRest convertItemToRest(Item item) {
+    public static ItemRest convertToRest(Item item) {
         return ItemRest.builder()
                 .id(item.getId())
                 .title(item.getTitle())
@@ -30,7 +31,7 @@ public class RestConvertor {
 
     private static Set<ItemRest> convertToItemsList(List<Item> listOfItems) {
         return listOfItems.stream()
-                .map(RestConvertor::convertItemToRest)
+                .map(RestConvertor::convertToRest)
                 .collect(Collectors.toSet());
     }
 }
