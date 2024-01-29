@@ -1,8 +1,5 @@
-rootProject.name = 'ShopingList'
-include 'Client'
-include 'Server'
-include 'Server:ListSharedObjects'
-findProject(':Server:ListSharedObjects')?.name = 'ListSharedObjects'
-include 'Server:Controller'
-findProject(':Server:Controller')?.name = 'Controller'
+rootProject.name = 'ShoppingList'
+include 'ListSharedObjects'
+include 'Controller'
+include 'ShoppingListManager'
 
