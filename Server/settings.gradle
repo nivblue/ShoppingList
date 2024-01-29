@@ -1,4 +1,0 @@
-rootProject.name = 'Server'
-include 'Controller'
-include 'ListSharedObjects'
-include 'ShoppingListManager'

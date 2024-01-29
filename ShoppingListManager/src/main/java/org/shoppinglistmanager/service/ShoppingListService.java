@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -39,6 +38,14 @@ public class ShoppingListService {
     }
 
 
+    public ResponseEntity<Integer> addNewItemToList(Integer listId, ItemRest itemRest) {
+        return shoppingListRepository.findById(listId)
+                .map((ShoppingList shoppingList) -> saveNewItem(shoppingList, itemRest))
+                .map(Item::getId)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.badRequest().build());
+    }
+
     public ResponseEntity<Integer> updateItem(Integer listId, ItemRest itemRest) {
         Optional<Item> item = shoppingListRepository.findById(listId)
                 .map(ShoppingList::getListOfItems)
@@ -47,14 +54,6 @@ public class ShoppingListService {
 
         return item
                 .map(itemRepository::save)
-                .map(Item::getId)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.badRequest().build());
-    }
-
-    public ResponseEntity<Integer> addNewItemToList(Integer id, ItemRest itemRest) {
-        return shoppingListRepository.findById(id)
-                .map((ShoppingList shoppingList) -> saveNewItem(shoppingList, itemRest))
                 .map(Item::getId)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.badRequest().build());
