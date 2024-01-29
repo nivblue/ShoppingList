@@ -82,4 +82,10 @@ public class ShoppingListService {
 
         return itemRepository.save(newItem);
     }
+
+    public ResponseEntity<Item> getItemByIds(Integer id) {
+        return itemRepository.findById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
 }
