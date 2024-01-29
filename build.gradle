@@ -1,16 +1,9 @@
-plugins {
-    id 'java'
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
 
-group = 'org.example'
-version = '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
-
-dependencies { }
-
-test {
-    useJUnitPlatform()
+subprojects {
+    dependencies {}
 }

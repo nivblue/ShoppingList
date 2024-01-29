@@ -77,12 +77,8 @@ public class ShoppingListService {
     }
 
     private Item saveNewItem(ShoppingList shoppingList, ItemRest itemRest) {
-        Item newItem = Item.builder()
-                .count(itemRest.count())
-                .title(itemRest.title())
-                .description(itemRest.description())
-                .shoppingList(shoppingList)
-                .build();
+        Item newItem = EntityConvertor.convertToSql(itemRest);
+        newItem.setShoppingList(shoppingList);
 
         return itemRepository.save(newItem);
     }

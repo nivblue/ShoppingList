@@ -18,7 +18,6 @@ public class EntityConvertor {
 
     public static Item convertToSql(ItemRest itemRest) {
         return Item.builder()
-                .id(itemRest.id())
                 .count(itemRest.count())
                 .title(itemRest.title())
                 .description(itemRest.description())

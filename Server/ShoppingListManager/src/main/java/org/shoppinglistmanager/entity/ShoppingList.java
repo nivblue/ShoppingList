@@ -22,7 +22,7 @@ public class ShoppingList {
     @OneToMany(mappedBy = "shoppingList",
             cascade = CascadeType.ALL,
             orphanRemoval = true)
-    private List<Item> listOfItems = new ArrayList<>();
+    private final List<Item> listOfItems = new ArrayList<>(); // TODO: Need to be set to final, and then be checked
 
     public ShoppingList(String title, String description) {
         this.title = title;
