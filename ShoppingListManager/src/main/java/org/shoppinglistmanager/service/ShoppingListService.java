@@ -34,7 +34,7 @@ public class ShoppingListService {
         return shoppingListRepository.findById(id)
                 .map(RestConvertor::convertToRest)
                 .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.badRequest().build());
+                .orElse(ResponseEntity.notFound().build());
     }
 
 

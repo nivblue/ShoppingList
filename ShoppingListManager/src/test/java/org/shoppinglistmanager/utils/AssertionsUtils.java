@@ -1,10 +1,12 @@
 package org.shoppinglistmanager.utils;
 
+import jakarta.annotation.Nullable;
 import org.junit.jupiter.api.Assertions;
 import org.listobjects.ShoppingListRest;
 
 public class AssertionsUtils {
-    public static void AssertShoppingListRest(ShoppingListRest actual, ShoppingListRest expected) {
+    public static void AssertShoppingListRest(@Nullable ShoppingListRest actual,
+                                              ShoppingListRest expected) {
         Assertions.assertNotNull(actual);
         Assertions.assertEquals(actual.id(), expected.id());
         Assertions.assertEquals(actual.title(), expected.title());
