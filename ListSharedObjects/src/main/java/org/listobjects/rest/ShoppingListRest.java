@@ -1,4 +1,4 @@
-package org.listobjects;
+package org.listobjects.rest;
 
 import lombok.Builder;
 import java.util.Set;

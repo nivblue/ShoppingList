@@ -1,7 +1,7 @@
 package org.shoppinglistmanager.utils;
 
 import org.junit.jupiter.api.Assertions;
-import org.listobjects.ShoppingListRest;
+import org.listobjects.rest.ShoppingListRest;
 
 public class AssertionsUtils {
     public static void AssertShoppingListRest(ShoppingListRest actual, ShoppingListRest expected) {

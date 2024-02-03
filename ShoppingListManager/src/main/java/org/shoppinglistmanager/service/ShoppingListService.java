@@ -1,7 +1,7 @@
 package org.shoppinglistmanager.service;
 
-import org.listobjects.ItemRest;
-import org.listobjects.ShoppingListRest;
+import org.listobjects.rest.ItemRest;
+import org.listobjects.rest.ShoppingListRest;
 import org.shoppinglistmanager.convertor.EntityConvertor;
 import org.shoppinglistmanager.convertor.RestConvertor;
 import org.shoppinglistmanager.entity.Item;

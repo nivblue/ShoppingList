@@ -10,7 +10,7 @@
         <Root level="INFO">
             <AppenderRef ref="Console"/>
         </Root>
-        <Logger name="org.producer" level="${env:LOG_LEVEL:-WARN}" additivity="false">
+        <Logger name="org.shoppingcontroller" level="${env:LOG_LEVEL:-WARN}" additivity="false">
             <Appender-ref ref="Console" />
         </Logger>
     </Loggers>

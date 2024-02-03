@@ -1,7 +1,7 @@
 package org.shoppinglistmanager.convertor;
 
-import org.listobjects.ItemRest;
-import org.listobjects.ShoppingListRest;
+import org.listobjects.rest.ItemRest;
+import org.listobjects.rest.ShoppingListRest;
 import org.shoppinglistmanager.entity.ShoppingList;
 import org.shoppinglistmanager.entity.Item;
 

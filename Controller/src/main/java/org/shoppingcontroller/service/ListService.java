@@ -1,6 +1,6 @@
 package org.shoppingcontroller.service;
 
-import org.listobjects.ShoppingListRest;
+import org.listobjects.rest.ShoppingListRest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;

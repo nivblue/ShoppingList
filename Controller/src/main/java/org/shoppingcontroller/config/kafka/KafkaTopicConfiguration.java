@@ -1,4 +1,4 @@
-package org.shoppingcontroller.kafkaconfig;
+package org.shoppingcontroller.config.kafka;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.listobjects.kafka.Topics;

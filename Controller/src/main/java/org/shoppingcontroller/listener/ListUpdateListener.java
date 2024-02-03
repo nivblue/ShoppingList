@@ -1,7 +1,7 @@
 package org.shoppingcontroller.listener;
 
 import lombok.extern.log4j.Log4j2;
-import org.listobjects.ShoppingListRest;
+import org.listobjects.rest.ShoppingListRest;
 
 @Log4j2
 //@Component

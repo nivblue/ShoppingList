@@ -1,6 +1,6 @@
 package org.shoppinglistmanager.utils;
 
-import org.listobjects.ShoppingListRest;
+import org.listobjects.rest.ShoppingListRest;
 
 import java.util.Collections;
 
