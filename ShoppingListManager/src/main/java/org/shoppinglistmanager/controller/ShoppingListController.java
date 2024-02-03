@@ -3,7 +3,7 @@ package org.shoppinglistmanager.controller;
 import lombok.extern.log4j.Log4j2;
 import org.listobjects.ItemRest;
 import org.listobjects.ShoppingListRest;
-import org.shoppinglistmanager.entity.Item;
+import org.listobjects.entity.Item;
 import org.shoppinglistmanager.service.ShoppingListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

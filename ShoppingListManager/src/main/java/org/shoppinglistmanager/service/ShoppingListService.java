@@ -2,10 +2,10 @@ package org.shoppinglistmanager.service;
 
 import org.listobjects.ItemRest;
 import org.listobjects.ShoppingListRest;
+import org.listobjects.entity.Item;
+import org.listobjects.entity.ShoppingList;
 import org.shoppinglistmanager.convertor.EntityConvertor;
 import org.shoppinglistmanager.convertor.RestConvertor;
-import org.shoppinglistmanager.entity.Item;
-import org.shoppinglistmanager.entity.ShoppingList;
 import org.shoppinglistmanager.repository.ItemRepository;
 import org.shoppinglistmanager.repository.ShoppingListRepository;
 import org.springframework.beans.factory.annotation.Autowired;

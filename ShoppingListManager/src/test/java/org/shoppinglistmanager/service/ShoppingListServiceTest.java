@@ -9,7 +9,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.shoppinglistmanager.convertor.EntityConvertor;
-import org.shoppinglistmanager.entity.ShoppingList;
+import org.listobjects.entity.ShoppingList;
 import org.shoppinglistmanager.repository.ShoppingListRepository;
 import org.shoppinglistmanager.utils.AssertionsUtils;
 import org.shoppinglistmanager.utils.TestUtils;

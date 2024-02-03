@@ -2,8 +2,8 @@ package org.shoppinglistmanager.convertor;
 
 import org.listobjects.ItemRest;
 import org.listobjects.ShoppingListRest;
-import org.shoppinglistmanager.entity.ShoppingList;
-import org.shoppinglistmanager.entity.Item;
+import org.listobjects.entity.Item;
+import org.listobjects.entity.ShoppingList;
 
 import java.util.List;
 import java.util.Set;
