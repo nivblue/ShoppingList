@@ -1,9 +1,8 @@
 package org.shoppinglistmanager.controller;
 
 import lombok.extern.log4j.Log4j2;
-import org.listobjects.ItemRest;
-import org.listobjects.ShoppingListRest;
-import org.shoppinglistmanager.entity.Item;
+import org.listobjects.entity.Item;
+import org.listobjects.entity.ShoppingList;
 import org.shoppinglistmanager.service.ShoppingListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,27 +17,27 @@ public class ShoppingListController {
     ShoppingListService shoppingListService;
 
     @PostMapping("/create")
-    public ResponseEntity<Integer> createShoppingList(@RequestBody ShoppingListRest shoppingListRest) {
-        log.debug("Creating new shopping titled : " + shoppingListRest.title());
-        return shoppingListService.createShoppingList(shoppingListRest);
+    public ResponseEntity<Integer> createShoppingList(@RequestBody ShoppingList shoppingList) {
+        log.debug("Creating new shopping titled : " + shoppingList.getTitle());
+        return shoppingListService.createShoppingList(shoppingList);
     }
 
     @PutMapping("/{id}/newItem")
     public ResponseEntity<Integer> addNewItemToList(@PathVariable Integer listId,
-                                                     @RequestBody ItemRest itemRest) {
-        log.debug("Adding new item " + itemRest.title() + " in shopping list with id : " + listId);
-        return shoppingListService.addNewItemToList(listId, itemRest);
+                                                     @RequestBody Item item) {
+        log.debug("Adding new item " + item.getTitle() + " in shopping list with id : " + listId);
+        return shoppingListService.addNewItemToList(listId, item);
     }
 
     @PutMapping("/{listId}/updateItem")
     public ResponseEntity<Integer> updateNewItemToList(@PathVariable Integer listId,
-                                                    @RequestBody ItemRest itemRest) {
-        log.debug("Updating item with id " + itemRest.id() + " in shopping list with id : " + listId);
+                                                    @RequestBody Item itemRest) {
+        log.debug("Updating item with id " + itemRest.getId() + " in shopping list with id : " + listId);
         return shoppingListService.updateItem(listId, itemRest);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ShoppingListRest> getShoppingListById(@PathVariable Integer id) {
+    public ResponseEntity<ShoppingList> getShoppingListById(@PathVariable Integer id) {
         log.debug("Getting shopping list for id : " + id);
         return shoppingListService.getShoppingListById(id);
     }

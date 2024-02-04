@@ -1,4 +1,4 @@
-package org.shoppinglistmanager.entity;
+package org.listobjects.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -15,8 +15,8 @@ import lombok.NoArgsConstructor;
 public class Item {
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)
-    private int id;
-    private int count;
+    private Integer id;
+    private Integer count;
     private String title;
     private String description;
 

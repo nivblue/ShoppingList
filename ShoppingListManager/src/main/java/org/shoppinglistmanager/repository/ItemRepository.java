@@ -1,6 +1,6 @@
 package org.shoppinglistmanager.repository;
 
-import org.shoppinglistmanager.entity.Item;
+import org.listobjects.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
