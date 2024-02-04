@@ -1,7 +1,7 @@
 package org.shoppingcontroller.controller;
 
+import org.listobjects.entity.ShoppingList;
 import org.shoppingcontroller.service.ListService;
-import org.listobjects.ShoppingListRest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -19,13 +19,13 @@ public class ListController {
 
 
     @PostMapping("/list")
-    public ResponseEntity<Integer> createList(ShoppingListRest shoppingListRest) {
-        return listService.createNewShoppingList(shoppingListRest);
+    public ResponseEntity<Integer> createList(ShoppingList shoppingList) {
+        return listService.createNewShoppingList(shoppingList);
     }
 
 
     @GetMapping("/{id}/")
-    public ResponseEntity<ShoppingListRest> getShoppingListById(@PathVariable int id) {
+    public ResponseEntity<ShoppingList> getShoppingListById(@PathVariable int id) {
         return listService.getShoppingListById(id);
     }
 }

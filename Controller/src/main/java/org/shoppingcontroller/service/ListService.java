@@ -1,6 +1,6 @@
 package org.shoppingcontroller.service;
 
-import org.listobjects.ShoppingListRest;
+import org.listobjects.entity.ShoppingList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -10,13 +10,13 @@ import org.springframework.stereotype.Service;
 public class ListService {
 
     @Autowired
-    private KafkaTemplate<String, ShoppingListRest> shoppingListProducer;
+    private KafkaTemplate<String, ShoppingList> shoppingListProducer;
 
-    public ResponseEntity<Integer> createNewShoppingList(ShoppingListRest shoppingListRest) {
+    public ResponseEntity<Integer> createNewShoppingList(ShoppingList shoppingList) {
         return null; // implement
     }
 
-    public ResponseEntity<ShoppingListRest> getShoppingListById(int id) {
+    public ResponseEntity<ShoppingList> getShoppingListById(int id) {
         return null; // implement
     }
 }
